@@ -1,0 +1,71 @@
+.card {
+  padding: 24px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.topRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.city {
+  font-size: 1.3rem;
+}
+
+.date {
+  margin: 4px 0 0;
+  color: #666;
+  font-size: 0.85rem;
+}
+
+.refreshBtn {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  background-color: #eef4fb;
+  color: #2a5298;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.refreshBtn:disabled {
+  opacity: 0.5;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.icon {
+  width: 88px;
+  height: 88px;
+}
+
+.temp {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.temp span {
+  font-size: 1.4rem;
+  margin-left: 2px;
+}
+
+.condition {
+  margin: 4px 0 0;
+  text-transform: capitalize;
+  color: #555;
+}
+
+.feelsLike {
+  margin: 12px 0 0;
+  color: #777;
+  font-size: 0.85rem;
+}

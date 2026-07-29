@@ -1,0 +1,28 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 12px;
+  max-width: 500px;
+  margin: 16px auto 0;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  color: #2a5298;
+}
+
+.value {
+  margin: 0;
+  color: #222;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.label {
+  margin: 2px 0 0;
+  color: #777;
+  font-size: 0.75rem;
+}

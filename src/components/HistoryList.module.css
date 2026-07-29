@@ -1,0 +1,89 @@
+.empty {
+  color: #888;
+  text-align: center;
+}
+
+.chipRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.chip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background-color: #fff;
+  border: 1px solid #d7e3f0;
+  color: #444;
+  font-size: 0.82rem;
+}
+
+.chip:hover {
+  background-color: #eef4fb;
+}
+
+.listHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.clearBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  color: #a12622;
+  font-size: 0.82rem;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+}
+
+.rank {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: #eef4fb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  color: #2a5298;
+}
+
+.cityName {
+  flex: 1;
+  font-weight: 500;
+}
+
+.viewBtn {
+  font-size: 0.8rem;
+  color: #2a5298;
+  background: none;
+  padding: 6px 10px;
+  border: 1px solid #d7e3f0;
+  border-radius: 6px;
+}
+
+.viewBtn:hover {
+  background-color: #eef4fb;
+}

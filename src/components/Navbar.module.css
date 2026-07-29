@@ -1,0 +1,85 @@
+.navbar {
+  background-color: #2a5298;
+  border-bottom: 1px solid #1e3c72;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.links {
+  display: flex;
+  gap: 20px;
+}
+
+.link,
+.activeLink {
+  color: #dce8f7;
+  font-size: 0.95rem;
+}
+
+.link:hover {
+  color: #fff;
+}
+
+.activeLink {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.chatBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #fff;
+  color: #2a5298;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+.chatBtn:hover {
+  background-color: #dce8f7;
+}
+
+.chatBtnActive {
+  background-color: #dce8f7;
+}
+
+.unitToggle {
+  background-color: #fff;
+  color: #2a5298;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 600px) {
+  .links {
+    gap: 12px;
+  }
+  .brand span {
+    display: none;
+  }
+  .chatBtn span {
+    display: none;
+  }
+  .chatBtn {
+    padding: 6px 8px;
+  }
+}

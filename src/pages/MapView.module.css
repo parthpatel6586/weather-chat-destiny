@@ -1,0 +1,68 @@
+.wrap {
+  padding: 8px 0 24px;
+  /* overflow: hidden; */
+}
+.searchbar{
+    overflow: hidden;   
+}
+.header {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.title {
+  font-size: 1.6rem;
+  margin-bottom: 6px;
+  align-items: left;
+}
+
+.subtitle {
+  color: #555;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.mapCard {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.mapContainer {
+  width: 100%;
+  height: 420px;
+}
+
+.mapOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eef4fb;
+}
+
+.selectedPlace {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: center;
+  padding: 10px 12px;
+  color: #2a5298;
+  font-weight: bold;
+  font-size: 0.9rem;
+  border-top: 1px solid #d7e3f0;
+}
+
+.hint {
+  text-align: center;
+  color: #888;
+  font-size: 0.85rem;
+  margin: 24px 0 0;
+}
+
+@media (max-width: 600px) {
+  .mapContainer {
+    height: 320px;
+  }
+}
