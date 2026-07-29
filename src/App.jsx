@@ -20,7 +20,7 @@ function App() {
           <Route path="/forecast" element={<Forecast />} />
           <Route path="/history" element={<SearchHistory />} />
           <Route path="/map" element={<MapView />} />
-          {/* <Route path="/chat" element={<PiAlignCenterHorizontalDuotone/>}/> */}
+           
                 </Routes>
       </main>
       <ChatWidget />
