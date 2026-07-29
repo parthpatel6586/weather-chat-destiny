@@ -23,6 +23,7 @@ const initialState = {
   forecastLoading: false,
   weather: null,
   forecast: [],
+  hourlyForecast: [],
   history: loadHistory(),
   error: null,
   unit: 'metric',
@@ -44,10 +45,16 @@ const weatherReducer = (state = initialState, action) => {
       return { ...state, forecastLoading: true };
 
     case types.FETCH_FORECAST_SUCCESS:
-      return { ...state, forecastLoading: false, forecast: action.payload, error: null };
+      return {
+        ...state,
+        forecastLoading: false,
+        forecast: action.payload.days,
+        hourlyForecast: action.payload.hourly,
+        error: null,
+      };
 
     case types.FETCH_FORECAST_FAILURE:
-      return { ...state, forecastLoading: false, forecast: [], error: action.payload };
+      return { ...state, forecastLoading: false, forecast: [], hourlyForecast: [], error: action.payload };
 
     case types.ADD_HISTORY: {
       const cityName = action.payload;

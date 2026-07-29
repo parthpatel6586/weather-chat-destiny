@@ -1,0 +1,23 @@
+.chartCard {
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.chartTitle {
+  font-size: 1rem;
+  margin: 0 0 12px;
+  color: #2a5298;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 24px;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -5,11 +5,12 @@ import SearchBar from '../components/SearchBar';
 import ForecastCard from '../components/ForecastCard';
 import Loader from '../components/Loader';
 import ErrorMessage from '../components/ErrorMessage';
+import WeatherCharts from '../components/charts/WeatherCharts';
 import { clearError } from '../redux/actions/weatherActions';
 import styles from './Forecast.module.css';
 
 function Forecast() {
-  const { weather, forecast, forecastLoading, error } = useSelector((state) => state.weather);
+  const { weather, forecast, hourlyForecast, forecastLoading, error } = useSelector((state) => state.weather);
   const dispatch = useDispatch();
 
   return (
@@ -32,11 +33,15 @@ function Forecast() {
       )}
 
       {!forecastLoading && forecast.length > 0 && (
-        <div className={styles.grid}>
-          {forecast.map((day) => (
-            <ForecastCard key={day.date} day={day} />
-          ))}
-        </div>
+        <>
+          <div className={styles.grid}>
+            {forecast.map((day) => (
+              <ForecastCard key={day.date} day={day} />
+            ))}
+          </div>
+
+          <WeatherCharts data={hourlyForecast} />
+        </>
       )}
     </div>
   );

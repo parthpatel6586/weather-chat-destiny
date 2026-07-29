@@ -5,6 +5,7 @@ import { FiMessageCircle } from 'react-icons/fi';
 import SearchBar from '../components/SearchBar';
 import WeatherCard from '../components/WeatherCard';
 import WeatherDetails from '../components/WeatherDetails';
+import WeatherAnimation from '../components/WeatherAnimation';
 import Loader from '../components/Loader';
 import ErrorMessage from '../components/ErrorMessage';
 import HistoryList from '../components/HistoryList';
@@ -13,7 +14,7 @@ import { useChat } from '../context/ChatContext';
 import styles from './Home.module.css';
 
 function Home() {
-  const { weather, loading, error, history } = useSelector((state) => state.weather);
+  const { weather, loading, error,history} = useSelector((state) => state.weather);
   const dispatch = useDispatch();
   const { toggle: toggleChat, isOpen: isChatOpen } = useChat();
 
@@ -38,15 +39,10 @@ function Home() {
 
       {loading && <Loader />}
 
-      {!loading && !weather && !error && (
-        <div className={styles.emptyState}>
-          {/* <WiCloudRefresh size={60} /> */}
-          {/* <p>Search city to see the current weather.</p> */}
-        </div>
-      )}
 
       {!loading && weather && (
         <>
+          {/* <WeatherAnimation condition={weather.weather[0].main} /> */}
           <WeatherCard weather={weather} />
           <WeatherDetails weather={weather} />
         </>
