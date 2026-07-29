@@ -7,7 +7,6 @@ import Home from './pages/Home';
 import Forecast from './pages/Forecast';
 import SearchHistory from './pages/SearchHistory';
 import MapView from './pages/MapView';
-import { PiAlignCenterHorizontalDuotone } from 'react-icons/pi';
 
 // import "./assets/styles/styles.css";
 function App() {
