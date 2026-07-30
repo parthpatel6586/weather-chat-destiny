@@ -49,10 +49,10 @@ function groupForecastByDay(data) {
   return Object.values(byDate)
     .slice(0, 5)
     .map((day) => {
-      const middayEntry =
+      const middayEntry = 
         day.entries.find((e) => e.dt_txt.includes('12:00:00')) || day.entries[Math.floor(day.entries.length / 2)];
 
-      return {
+      return{
         date: day.date,
         maxTemp: Math.max(...day.temps),
         minTemp: Math.min(...day.temps),
@@ -63,8 +63,7 @@ function groupForecastByDay(data) {
     });
 }
 
-// Flattens the raw 3-hour OpenWeather forecast entries into a chart-friendly
-// array: temperature, humidity, wind speed and rain probability (pop) per slot.
+
 function buildHourlySeries(data, limit = 16) {
   return data.list.slice(0, limit).map((entry) => {
     const date = new Date(entry.dt_txt.replace(' ', 'T'));

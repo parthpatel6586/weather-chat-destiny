@@ -5,9 +5,9 @@ const chatAxios = axios.create({
   timeout: 20000,
 });
 
-export const sendChatMessage = ({ message, history, weatherContext }) =>
+export const sendChatMessage = ({ message, history, weatherContext, provider }) =>
   chatAxios
-    .post('/api/chat', { message, history, weatherContext })
+    .post('/api/chat', { message, history, weatherContext, provider })
     .then((res) => res.data.reply)
     .catch((err) => {
       const serverMessage = err.response?.data?.error;
